@@ -1,0 +1,274 @@
+/* General Body and Background Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #dc1842; /* Fallback for older browsers */
+  background: linear-gradient(to right, #6c50b9, #f8cdda);
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden; /* Allows vertical scrolling but prevents horizontal */
+  position: relative;
+}
+
+/* --- NEW: Entrance Animation --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo Placeholder Styles */
+.logo-placeholder {
+  height: 60px;
+  width: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 12px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Main Translucent Container */
+.container {
+  max-width: 550px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Header with Logos */
+.page-header {
+  margin-bottom: 30px;
+  opacity: 0; /* Animation Start */
+  animation: fadeInUp 0.5s ease-out 0.1s forwards;
+}
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+.logo {
+  height: 60px;
+  filter: drop-shadow(0 4px 6px rgba(77, 42, 168, 0.3));
+}
+h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  opacity: 0; /* Animation Start */
+  animation: fadeInUp 0.5s ease-out 0.2s forwards;
+}
+.subtitle {
+  margin: 5px 0 0 0;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* Form Styles */
+form {
+  text-align: left;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: all 0.3s;
+  opacity: 0; /* Animation Start */
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+/* Staggered animation delays for inputs */
+input#name {
+  animation-delay: 0.3s;
+}
+input#college {
+  animation-delay: 0.35s;
+}
+input#branch {
+  animation-delay: 0.4s;
+}
+input#year {
+  animation-delay: 0.45s;
+}
+input#classRollno {
+  animation-delay: 0.5s;
+}
+input#email {
+  animation-delay: 0.55s;
+}
+input#phone {
+  animation-delay: 0.6s;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Checkbox Styles */
+fieldset {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px; /* Adjusted margin */
+  opacity: 0; /* Animation Start */
+  animation: fadeInUp 0.5s ease-out 0.65s forwards;
+}
+legend {
+  padding: 0 10px;
+}
+label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+  cursor: pointer;
+}
+label input[type="checkbox"] {
+  accent-color: #f8cdda;
+  width: 18px;
+  height: 18px;
+}
+label span {
+  flex: 1;
+}
+
+/* Live Amount Styles */
+#liveAmountContainer {
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+#liveAmountContainer h3 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #fff;
+}
+#liveAmount {
+  font-weight: 700;
+}
+
+button {
+  width: 100%;
+  background: linear-gradient(90deg, #e8a, #c86dd7);
+  border: none;
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#payBtn {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out 0.7s forwards;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:disabled {
+  background: #888;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Payment and Message sections */
+#paymentSection {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+#amount {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+#qrcode canvas {
+  margin: 15px auto;
+  border-radius: 8px;
+  background: white;
+  padding: 10px;
+}
+.message {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  display: none;
+  font-weight: 500;
+}
+.success {
+  background: rgba(4, 120, 87, 0.8);
+  color: #fff;
+}
+.error {
+  background: rgba(153, 27, 27, 0.8);
+  color: #fff;
+}
+
+.message a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+body::after {
+  content: "Developed by IEI TECH & DB TEAM";
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  font-size: 12px;
+  color: rgb(245, 6, 46);
+  opacity: 0.6;
+  z-index: 1000;
+}
